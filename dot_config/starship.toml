@@ -1,0 +1,168 @@
+# Starship configuration file 
+
+# ~/.config/starship.toml
+
+# Custom format style
+
+# Default format style
+# format = """
+# $username\
+# $hostname\
+# $shlvl\
+# $kubernetes\
+# $directory\
+# $git_branch\
+# $git_commit\
+# $git_state\
+# $git_status\
+# $hg_branch\
+# $docker_context\
+# $package\
+# $cmake\
+# $dart\
+# $dotnet\
+# $elixir\
+# $elm\
+# $erlang\
+# $golang\
+# $helm\
+# $java\
+# $julia\
+# $kotlin\
+# $nim\
+# $nodejs\
+# $ocaml\
+# $perl\
+# $php\
+# $purescript\
+# $python\
+# $ruby\
+# $rust\
+# $scala\
+# $swift\
+# $terraform\
+# $vagrant\
+# $zig\
+# $nix_shell\
+# $conda\
+# $memory_usage\
+# $aws\
+# $gcloud\
+# $openstack\
+# $env_var\
+# $crystal\
+# $custom\
+# $cmd_duration\
+# $line_break\
+# $lua\
+# $jobs\
+# $battery\
+# $time\
+# $status\
+# $shell\
+# $character"""
+
+
+format = """
+[╭](#ffffff) $cmd_duration$status$time$battery$jobs
+[│](#ffffff) $username$hostname$shlvl$kubernetes$directory$git_branch$git_commit$git_state$git_status$hg_branch$docker_context$package$cmake$dart$dotnet$elixir$elm$erlang$golang$helm$java$julia$kotlin$nim$nodejs$ocaml$perl$php$purescript$python$ruby$rust$scala$swift$terraform$vagrant$zig$nix_shell$conda$aws$gcloud$openstack$env_var$crystal$custom$lua
+[╰](#ffffff)$shell$character"""
+
+add_newline = true
+
+# Newline display config
+[character]
+success_symbol = "[λ](bold green)"
+error_symbol = "[λ](bold red)"
+vicmd_symbol = "[V](bold green)"
+
+# Cmd config
+[cmd_duration]
+min_time = 0
+show_milliseconds = true
+style = "bold #ffe600"
+format = "[ﮫ]($style) [$duration]($style) "
+
+# Directory config
+[directory]
+truncate_length = 3
+truncate_symbol = "…/"
+
+style = "bold #61D6D6"
+read_only = ""
+read_only_style = "red"
+
+format = "in []($style) [$path]($style)[[$read_only]($read_only_style)]($read_only_style) "
+
+
+# Battery config
+[battery]
+disabled = false
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+format = "│ [$symbol$percentage]($style) "
+
+[[battery.display]]
+threshold = 15
+style = "bold red"
+
+[[battery.display]]
+threshold = 50
+style = "bold #f6ff00"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+
+# # Memory config
+# [memory_usage]
+# show_percentage = false
+# show_swap = false
+# threshold = -1
+# symbol = " "
+# style = "#f6ff00 bold"
+# disabled = false
+
+
+
+# Docker config
+[docker_context]
+disabled = false
+
+
+# Time config
+[time]
+disabled = false
+style = "white bold"
+format = "│ [$time]($style) "
+
+
+# User config
+[username]
+style_root = "#ff9d00 bold"
+style_user = "#ff9d00 bold"
+show_always = true
+format = "[]($style) [$user]($style) "
+
+
+# Package config
+[package]
+disabled = true
+
+
+# Status config
+[status]
+disabled = false
+symbol = ""
+map_symbol = true
+not_executable_symbol = "🚫"
+not_found_symbol = "🔍"
+sigint_symbol = "🧱"
+format = '│ [\[$symbol code $int \($common_meaning$signal_name\)\]]($style) '
+
+[jobs]
+disabled = false
+threshold = 1
+format = "│ ([$symbol$number]($style) jobs running)"
