@@ -85,7 +85,8 @@ format = "[ﮫ]($style) [$duration]($style) "
 
 # Directory config
 [directory]
-
+# truncate_length = 3
+# truncate_symbol = "…/"
 
 style = "bold #61D6D6"
 read_only = ""
