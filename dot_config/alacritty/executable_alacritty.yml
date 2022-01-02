@@ -89,7 +89,7 @@ scrolling:
 # Font configuration
 font:
   # Normal (roman) font face
-  size: 11
+  size: 16
   normal:
     # Font family
     #
@@ -404,8 +404,11 @@ mouse:
 # And optionally:
 #
 # - `mods` (see key bindings)
-#mouse_bindings:
-#  - { mouse: Middle, action: PasteSelection }
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+  - { mouse: Right,  action: CopySelection  }
+
+
 
 # Key bindings
 #
