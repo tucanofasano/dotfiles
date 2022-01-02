@@ -69,7 +69,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-## Cops colorization
+## Cope colorization
 set -l cope_script_path /usr/share/perl5/vendor_perl/auto/share/dist/Cope/
 
 for i in blkid free ifconfig lspci lsusb mount ps traceroute wget sha1sum sha256sum sha384sum sha512sum shasum
