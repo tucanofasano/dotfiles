@@ -871,3 +871,97 @@ mouse_bindings:
 
   # Print all received window events.
   #print_events: false
+
+# # Custom colorscheme fitting Sweetified theme
+# colors:
+#   primary:
+#     background: '0x0a1124'
+#     foreground: '0xeec49a'
+#   cursor:
+#     text:       '0x0a1124'
+#     cursor:     '0xeec49a'
+#   normal:
+#     black:      '0x0a1124'
+#     red:        '0x5F4149'
+#     green:      '0xEB3247'
+#     yellow:     '0xBC4349'
+#     blue:       '0xF35645'
+#     magenta:    '0xF6A73B'
+#     cyan:       '0xFAD32F'
+#     white:      '0xeec49a'
+#   bright:
+#     black:      '0xa6896b'
+#     red:        '0x5F4149'
+#     green:      '0xEB3247'
+#     yellow:     '0xBC4349'
+#     blue:       '0xF35645'
+#     magenta:    '0xF6A73B'
+#     cyan:       '0xFAD32F'
+#     white:      '0xeec49a'
+
+# Hyper theme
+# Source: https://github.com/eendroroy/alacritty-theme/blob/master/themes/hyper.yaml
+
+# Colors (Hyper)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x000000'
+#     foreground: '0xffffff'
+#   cursor:
+#     text: '0xF81CE5'
+#     cursor: '0xffffff'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x000000'
+#     red:     '0xfe0100'
+#     green:   '0x33ff00'
+#     yellow:  '0xfeff00'
+#     blue:    '0x0066ff'
+#     magenta: '0xcc00ff'
+#     cyan:    '0x00ffff'
+#     white:   '0xd0d0d0'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x808080'
+#     red:     '0xfe0100'
+#     green:   '0x33ff00'
+#     yellow:  '0xfeff00'
+#     blue:    '0x0066ff'
+#     magenta: '0xcc00ff'
+#     cyan:    '0x00ffff'
+#     white:   '0xFFFFFF'
+
+colors:
+  # Default colors
+  primary:
+    background: '0x002635'
+    foreground: '0xe6e6dc'
+
+  # Normal colors
+  normal:
+    black:   '0x00384d'
+    red:     '0xc43061'
+    green:   '0x7fc06e'
+    yellow:  '0xf08e48'
+    blue:    '0x1c8db2'
+    magenta: '0xc694ff'
+    cyan:    '0x00cccc'
+    white:   '0x77929e'
+
+  # Bright colors
+  bright:
+    black:   '0x517f8d'
+    red:     '0xff5a67'
+    green:   '0x9cf087'
+    yellow:  '0xffcc1b'
+    blue:    '0x7eb2dd'
+    magenta: '0xfb94ff'
+    cyan:    '0x00ffff'
+    white:   '0xb7cff9'
+
+  cursor:
+    text: "0x002635"
+    cursor: "0xffcc1b"
