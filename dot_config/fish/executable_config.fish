@@ -50,6 +50,7 @@ alias lsgitpkg='pacman -Q | grep -i "\-git"'
 alias rmorphpkgs='sudo pacman -Rns (pacman -Qtdq)'
 alias paccleanup='paccache -rvk2'
 alias sudoedit='sudo -e'
+alias p='paru'
 
 # The next line updates PATH for Netlify's Git Credential Helper.
 test -f '/home/tommy/.config/netlify/helper/path.fish.inc' && source '/home/tommy/.config/netlify/helper/path.fish.inc'
