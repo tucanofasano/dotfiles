@@ -93,3 +93,6 @@ end
 function sudo!!
     eval sudo $history[1]
 end
+
+# Enable Dracula theme to work in Micro
+export MICRO_TRUECOLOR=1
