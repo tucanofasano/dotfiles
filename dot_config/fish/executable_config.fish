@@ -39,8 +39,8 @@ alias cat='bat --style header --style rules --style snip --style changes --style
 
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias wget='wget -c '
-alias update-mirror='sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
-alias upd='cat /etc/pacman.d/mirrorlist && sudo pacman -Syu && fish_update_completions && sudo updatedb && sudo -H DIFFPROG=meld pacdiff'
+alias update-mirror='sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
+alias upd='sudo pacman -Syu && fish_update_completions && sudo updatedb && sudo -H DIFFPROG=meld pacdiff'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
