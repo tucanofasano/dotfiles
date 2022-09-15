@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# This script will be used to adjust audio volume for a specific sink-input (for example, Spotify)
+
+readonly VERSION="1.0.0"
+
+usage() {
+    
+    cat <<EOF
+    usage: adjust-app-volume COMMAND [ARGUMENTS...]
+    operations:
+    
+    help                          Show this message.
+    version                       Show version information
+    adjust-volume CLIENT +-N      Increase/Decrease CLIENT audio volume
+EOF
+}
+
+get_sink_id() {
+    pulsemixer --list-sinks | grep -I "$1" | awk '{print $4}' | sed 's/,//g' | cat
+}
+
+adjust_volume() {
+    pulsemixer --id "$1" --change-volume "$2"
+}
+
+
+main() {
+    # Simple command parser
+
+    declare command="$1"
+    declare client="$2"
+    declare n="$3"
+
+    case "${command}" in
+    help | --help)
+        usage
+        ;;
+    version | --version)
+        echo v${VERSION}
+        ;;
+    adjust-volume)
+        adjust_volume "$(get_sink_id "$client")" "$n"
+        ;;
+    esac
+}
+
+main "$@"
