@@ -1,14 +1,3 @@
-# Set values
-# Hide welcome message
-set fish_greeting
-set VIRTUAL_ENV_DISABLE_PROMPT 1
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-
-# Set settings for https://github.com/franciscolourenco/done
-set -U __done_min_cmd_duration 10000
-set -U __done_notification_urgency_level low
-
-
 ## Environment setup
 # Apply .profile
 source ~/.profile
@@ -20,13 +9,26 @@ if test -d ~/.local/bin
     end
 end
 
-## Enable starship
-if status --is-interactive
-    source ("/usr/bin/starship" init fish --print-full-init | psub)
-end
+fish_add_path -P ~/.npm-global/bin 
+
+# Set values
+# Hide welcome message
+set fish_greeting
+set VIRTUAL_ENV_DISABLE_PROMPT 1
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
+# Enable starship
+starship init fish | source
+
+# Set settings for https://github.com/franciscolourenco/done
+set -U __done_min_cmd_duration 10000
+set -U __done_notification_urgency_level low
 
 
 ## Useful aliases
+# Make rm prompt when removing more than 3 files
+alias rm='rm -I'
+
 # Replace ls with exa
 alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
 alias la='exa -a --color=always --group-directories-first --icons' # all files and dirs
@@ -35,12 +37,12 @@ alias lt='exa -aT --color=always --group-directories-first --icons' # tree listi
 alias l.="exa -a | egrep '^\.'" # show only dotfiles
 
 # Replace cat with bat
-alias cat='bat --style header --style rules --style snip --style changes --style header'
+alias cat='bat --style header --style rule --style snip --style changes --style header'
 
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias wget='wget -c '
 alias update-mirror='sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
-alias upd='sudo pacman -Syu && fish_update_completions && sudo updatedb && sudo -H DIFFPROG=meld pacdiff'
+alias upd='paru -Syu && fish_update_completions && sudo updatedb && sudo -H DIFFPROG=meld pacdiff'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
