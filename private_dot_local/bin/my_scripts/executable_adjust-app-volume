@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/sh
 # This script will be used to adjust audio volume for a specific sink-input (for example, Spotify)
 
-readonly VERSION="1.0.0"
+readonly VERSION="1.0.1"
 
 usage() {
     
@@ -27,9 +27,9 @@ adjust_volume() {
 main() {
     # Simple command parser
 
-    declare command="$1"
-    declare client="$2"
-    declare n="$3"
+    command="$1"
+    client="$2"
+    amount="$3"
 
     case "${command}" in
     help | --help)
@@ -39,7 +39,7 @@ main() {
         echo v${VERSION}
         ;;
     adjust-volume)
-        adjust_volume "$(get_sink_id "$client")" "$n"
+        adjust_volume "$(get_sink_id "$client")" "$amount"
         ;;
     esac
 }
