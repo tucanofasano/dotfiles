@@ -1,7 +1,7 @@
 #!/usr/bin/sh
-# This script will be used to adjust audio volume for a specific sink-input (for example, Spotify)
+# This little script will be used to adjust audio volume for a specific application output (for example, Spotify)
 
-readonly VERSION="1.0.1"
+readonly VERSION="2.0.0"
 
 usage() {
     
@@ -9,18 +9,18 @@ usage() {
     usage: adjust-app-volume COMMAND [ARGUMENTS...]
     operations:
     
-    help                          Show this message.
-    version                       Show version information
-    adjust-volume CLIENT +-N      Increase/Decrease CLIENT audio volume
+    help                                  Show this message.
+    version                               Show version information
+    adjust-volume CLIENT VOL[%][-/+]      Increase/Decrease CLIENT audio output volume
 EOF
 }
 
 get_sink_id() {
-    pulsemixer --list-sinks | grep -I "$1" | awk '{print $4}' | sed 's/,//g' | cat
+    wpctl status | grep -I "$1" | awk '{print $1}' | sed 's/[.]//g' | tail -1 | cat
 }
 
 adjust_volume() {
-    pulsemixer --id "$1" --change-volume "$2"
+    wpctl set-volume "$1" "$2"
 }
 
 
