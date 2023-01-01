@@ -40,6 +40,8 @@ alias l.="exa -a | egrep '^\.'" # show only dotfiles
 # Replace cat with bat
 alias cat='bat --style header --style rule --style snip --style changes --style header'
 
+alias icat="kitty +kitten icat"
+
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias wget='wget -c '
 alias update-mirror='sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
