@@ -9,7 +9,8 @@ if test -d ~/.local/bin
     end
 end
 
-fish_add_path -P ~/.npm-global/bin 
+fish_add_path -P ~/.npm-global/bin
+fish_add_path -P ~/.deno/bin
 
 # Set values
 # Hide welcome message
