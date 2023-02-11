@@ -1,19 +1,18 @@
 {
   "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 30, // Waybar height (to be removed for auto height)
+  //"height": 30, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
 
-  "modules-left": ["wlr/workspaces", "cpu", "memory"],
+  "modules-left": ["wlr/workspaces", "cpu", "memory", "tray", "idle_inhibitor"],
 
   "modules-center": ["hyprland/window"],
 
   "modules-right": [
-    "tray",
-    "idle_inhibitor",
     "pulseaudio",
+    "custom/spotify-control",
     "network",
     "temperature",
     "battery",
@@ -58,10 +57,14 @@
   "cpu": {
     "format": "{usage}% ",
     "tooltip": false,
-    "interval": 1
+    "interval": 1,
+    "on-click": "kitty btm --basic --mem_as_value --enable_gpu_memory"
   },
   "memory": {
-    "format": "{percentage}%|{swapPercentage}% "
+    "format": "{percentage}%|{swapPercentage}% ",
+    "tooltip-format": "{used}GiB/{total}GiB RAM \n{swapUsed}GiB/{swapTotal}GiB SWAP used",
+    "interval": 1,
+    "on-click": "kitty btm --basic --mem_as_value --enable_gpu_memory"
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -93,13 +96,11 @@
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "{signalStrength}% | {bandwidthTotalBits} ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-ethernet": "{bandwidthDownBits}  | {bandwidthUpBits} 祝 ",
     "tooltip-format": "{ifname} via {gwaddr}",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "on-click": "wofi-wifi.sh", // https://raw.githubusercontent.com/cristobaltapia/dotfiles_sway/master/home/.config/wofi/scripts/wofi-wifi.sh
-    // "on-click": "nmtui",
-    "interval": 1 // 60s is way too slow for network speeds
+    "on-click": "kitty nmtui",
+    "interval": 1
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -118,19 +119,23 @@
       "car": "",
       "default": ["", "", ""]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "max-volume": 150,
+    "ignored-sinks": ["Easy Effects Sink"]
   },
-  "custom/media": {
-    "format": "{icon} {}",
+  "custom/spotify-control": {
+    "format": "{percentage}% {icon}",
     "return-type": "json",
-    "max-length": 40,
     "format-icons": {
-      "spotify": "",
-      "default": "🎜"
+      "Playing": "  ",
+      "Paused": "  "
     },
-    "escape": true,
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    "max-length": 70,
+    "tooltip": false,
+    "exec": "playerctl -a metadata -p spotify --format '{\"alt\": \"{{status}}\", \"class\": \"{{status}}\", \"percentage\": {{volume*100}}}' -F",
+    "on-click": "playerctl play-pause -p spotify",
+    "on-scroll-up": "playerctl volume 0.01+ -p spotify",
+    "on-scroll-down": "playerctl volume 0.01- -p spotify"
   },
   "clock": {
     // "timezone": "America/New_York",
