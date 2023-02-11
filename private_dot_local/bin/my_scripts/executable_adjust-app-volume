@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 # This little script will be used to adjust audio volume for a specific application output (for example, Spotify)
 
-readonly VERSION="2.0.0"
+readonly VERSION="2.1.0"
 
 usage() {
     
@@ -12,6 +12,7 @@ usage() {
     help                                  Show this message.
     version                               Show version information
     adjust-volume CLIENT VOL[%][-/+]      Increase/Decrease CLIENT audio output volume
+    get-volume CLIENT                     Get CLIENT audio output volume
 EOF
 }
 
@@ -23,6 +24,9 @@ adjust_volume() {
     wpctl set-volume "$1" "$2"
 }
 
+get_volume() {
+    wpctl get-volume "$1" | awk '{print $2*100}' | sed 's/$/%/' | cat
+}
 
 main() {
     # Simple command parser
@@ -40,6 +44,9 @@ main() {
         ;;
     adjust-volume)
         adjust_volume "$(get_sink_id "$client")" "$amount"
+        ;;
+    get-volume)
+        get_volume "$(get_sink_id "$client")"
         ;;
     esac
 }
