@@ -6,15 +6,15 @@
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
 
-  "modules-left": ["wlr/workspaces", "cpu", "memory", "tray", "idle_inhibitor"],
+  "modules-left": ["wlr/workspaces", "cpu", "memory", "tray"],
 
   "modules-center": ["hyprland/window"],
 
   "modules-right": [
-    "pulseaudio",
     "custom/spotify-control",
+    "pulseaudio",
     "network",
-    "temperature",
+    "temperature",  
     "battery",
     "clock"
   ],
@@ -42,13 +42,6 @@
   },
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
   },
   "tray": {
     "icon-size": 21,
