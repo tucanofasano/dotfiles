@@ -9,7 +9,6 @@ if test -d ~/.local/bin
     end
 end
 
-fish_add_path -P ~/.npm-global/bin
 fish_add_path -P ~/.deno/bin
 
 # Set values
@@ -102,3 +101,5 @@ end
 
 # Enable Dracula theme to work in Micro
 export MICRO_TRUECOLOR=1
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
