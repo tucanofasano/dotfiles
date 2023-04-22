@@ -10,6 +10,7 @@ if test -d ~/.local/bin
 end
 
 fish_add_path -P ~/.deno/bin
+fish_add_path -P ~/.cargo/bin
 
 # Set values
 # Hide welcome message
