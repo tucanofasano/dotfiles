@@ -51,13 +51,13 @@
     "format": "{usage}% ",
     "tooltip": false,
     "interval": 1,
-    "on-click": "kitty btm --basic --mem_as_value --enable_gpu_memory"
+    "on-click": "kitty btm --basic --enable_gpu_memory"
   },
   "memory": {
     "format": "{percentage}%|{swapPercentage}% ",
     "tooltip-format": "{used}GiB/{total}GiB RAM \n{swapUsed}GiB/{swapTotal}GiB SWAP used",
     "interval": 1,
-    "on-click": "kitty btm --basic --mem_as_value --enable_gpu_memory"
+    "on-click": "kitty btm --basic --enable_gpu_memory"
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
