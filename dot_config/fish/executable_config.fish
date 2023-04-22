@@ -26,8 +26,8 @@ set -U __done_notification_urgency_level low
 
 
 ## Useful aliases
-# Make rm prompt when removing more than 3 files
-alias rm='rm -I'
+# Make rm go to trash
+alias rm='trash'
 
 # Replace ls with exa
 alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
