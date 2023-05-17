@@ -48,13 +48,13 @@
     "spacing": 10
   },
   "cpu": {
-    "format": "{usage}% ",
+    "format": "{usage}% 󰍛",
     "tooltip": false,
     "interval": 1,
     "on-click": "kitty btm --basic --enable_gpu_memory"
   },
   "memory": {
-    "format": "{percentage}%|{swapPercentage}% ",
+    "format": "{percentage}%|{swapPercentage}% ",
     "tooltip-format": "{used}GiB/{total}GiB RAM \n{swapUsed}GiB/{swapTotal}GiB SWAP used",
     "interval": 1,
     "on-click": "kitty btm --basic --enable_gpu_memory"
@@ -89,9 +89,10 @@
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "{signalStrength}% | {bandwidthTotalBits} ",
-    "format-ethernet": "{bandwidthDownBits}  | {bandwidthUpBits} 祝 ",
+    "format-ethernet": "{bandwidthDownBits}  | {bandwidthUpBits}  󰈀",
     "tooltip-format": "{ifname} via {gwaddr}",
-    "format-linked": "{ifname} (No IP) ",
+    "format-linked": "{ifname} (No IP) 󰈀",
+    "format-disconnected": "None 󰕑",
     "on-click": "kitty nmtui",
     "interval": 1
   },

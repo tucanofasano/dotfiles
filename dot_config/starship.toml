@@ -81,7 +81,7 @@ vicmd_symbol = "[V](bold green)"
 min_time = 0
 show_milliseconds = true
 style = "bold #ffe600"
-format = "[ﮫ]($style) [$duration]($style) "
+format = "[󱦟]($style) [$duration]($style) "
 
 # Directory config
 [directory]
@@ -92,15 +92,15 @@ style = "bold #61D6D6"
 read_only = ""
 read_only_style = "red"
 
-format = "in []($style) [$path]($style)[[$read_only]($read_only_style)]($read_only_style) "
+format = "in []($style) [$path]($style)[[$read_only]($read_only_style)]($read_only_style) "
 
 
 # Battery config
 [battery]
-disabled = false
-full_symbol = " "
-charging_symbol = " "
-discharging_symbol = " "
+disabled = true
+full_symbol = "󰁹"
+charging_symbol = "󰢝"
+discharging_symbol = "󰁾"
 format = "│ [$symbol$percentage]($style) "
 
 [[battery.display]]
@@ -155,11 +155,12 @@ disabled = true
 # Status config
 [status]
 disabled = false
-symbol = ""
+symbol = "❌"
 map_symbol = true
 not_executable_symbol = "🚫"
 not_found_symbol = "🔍"
 sigint_symbol = "🧱"
+signal_symbol = "⚡"
 format = '│ [\[$symbol code $int \($common_meaning$signal_name\)\]]($style) '
 
 [jobs]
