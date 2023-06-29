@@ -49,7 +49,6 @@ tooltip {
     border-radius: 10px;
 }
 
-
 #cpu,
 #memory,
 #window,
@@ -60,7 +59,8 @@ tooltip {
 #workspaces,
 #tray,
 #temperature,
-#custom-spotify-control {
+#custom-spotify-control,
+#custom-arch-icon {
     background: #1e1e2e;
     padding: 0px 10px;
     margin: 3px 0px;
@@ -73,7 +73,7 @@ tooltip {
     margin-right: 10px;
 }
 
-#workspaces {
+#custom-arch-icon {
     background: @base;
     border-radius: 10px 0 0 10px;
     margin-left: 10px;
@@ -130,6 +130,10 @@ tooltip {
 	color: @mauve;
 	border-left: 0px;
 	border-right: 0px;
+}
+
+#custom-arch-icon {
+	color: rgb(23, 147, 209) /* Arch official colors */
 }
 
 /* Custom states */
