@@ -207,3 +207,5 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 # User aliases
 alias rm='trash'
 alias icat="kitty +kitten icat"
+
+alias gitui="gitui -t mocha.ron"
