@@ -40,12 +40,12 @@ end
 
 fish_add_path -P ~/.deno/bin
 fish_add_path -P ~/.cargo/bin
-
+fish_add_path -P ~/.moon/bin
+fish_add_path -P ~/.local/share/containers/podman-desktop/extensions-storage/podman-desktop.compose/bin
 
 ## Starship prompt
-if status --is-interactive
-   source ("/usr/bin/starship" init fish --print-full-init | psub)
-end
+starship init fish | source
+
 
 # Set settings for https://github.com/franciscolourenco/done
 set -U __done_min_cmd_duration 10000
@@ -209,3 +209,4 @@ alias rm='trash'
 alias icat="kitty +kitten icat"
 
 alias gitui="gitui -t mocha.ron"
+
