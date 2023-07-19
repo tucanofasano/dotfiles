@@ -6,7 +6,7 @@
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
 
-  "modules-left": ["custom/arch-icon", "wlr/workspaces", "cpu", "memory", "tray"],
+  "modules-left": ["custom/arch-icon", "wlr/workspaces", "cpu", "memory", "custom/nvidia-smi", "tray"],
 
   "modules-center": ["hyprland/window"],
 
@@ -54,15 +54,24 @@
   },
   "cpu": {
     "format": "{usage}% 󰍛",
-    "tooltip": false,
+    "tooltip": true,
     "interval": 1,
-    "on-click": "kitty btm --basic --enable_gpu_memory"
+    "on-click": "kitty btm --basic"
   },
   "memory": {
     "format": "{percentage}%|{swapPercentage}% ",
-    "tooltip-format": "{used}GiB/{total}GiB RAM \n{swapUsed}GiB/{swapTotal}GiB SWAP used",
+    "tooltip-format": "{used}GiB/{total}GiB RAM used\n{swapUsed}GiB/{swapTotal}GiB SWAP used",
     "interval": 1,
-    "on-click": "kitty btm --basic --enable_gpu_memory"
+    "on-click": "kitty btm --basic"
+  },
+  "custom/nvidia-smi": {
+  	 "format": "{} {icon}",
+  	 "exec-if": "nvidia-smi",
+  	 "exec": "nvidia-smi-waybar",
+  	 "return-type": "json",
+  	 "format-icons": "󰾲",
+  	 "on-click": "kitty nvtop",
+  	 "interval": 1,
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
