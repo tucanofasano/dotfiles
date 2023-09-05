@@ -6,7 +6,7 @@
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
 
-  "modules-left": ["custom/arch-icon", "wlr/workspaces", "cpu", "memory", "custom/nvidia-smi", "tray"],
+  "modules-left": ["custom/arch-icon", "hyprland/workspaces", "cpu", "memory", "custom/nvidia-smi", "tray"],
 
   "modules-center": ["hyprland/window"],
 
@@ -25,7 +25,7 @@
   	"format-icons": "󰣇",
   },
   
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "format": "{name}: {icon}",
     "format-icons": {
       "urgent": "",
