@@ -71,7 +71,6 @@
   	 "return-type": "json",
   	 "format-icons": "󰾲",
   	 "on-click": "kitty nvtop",
-  	 "interval": 1,
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
