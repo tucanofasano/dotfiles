@@ -51,7 +51,7 @@ tooltip {
 
 #cpu,
 #memory,
-#custom-nvidia-smi,
+#custom-gpu-usage,
 #window,
 #clock,
 #battery,
@@ -128,7 +128,7 @@ tooltip {
 
 #cpu,
 #memory,
-#custom-nvidia-smi {
+#custom-gpu-usage {
 	color: @mauve;
 	border-left: 0px;
 	border-right: 0px;
