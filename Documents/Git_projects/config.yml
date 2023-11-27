@@ -1,0 +1,21 @@
+trees:
+- root: ~/Documents/Git_projects
+  repos:
+  - name: web
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/Tommaso-Melacarne-compiti-scuola/web.git
+      type: https
+  - name: cpp
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/Tommaso-Melacarne-compiti-scuola/cpp.git
+      type: https
+  - name: nvidia-smi-waybar
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/PolpOnline/nvidia-smi-waybar.git
+      type: https
