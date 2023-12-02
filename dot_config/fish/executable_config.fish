@@ -48,6 +48,8 @@ fish_add_path -P ~/Android/Sdk/platform-tools/
 ## Starship prompt
 starship init fish | source
 
+## Zoxide
+zoxide init fish | source
 
 # Set settings for https://github.com/franciscolourenco/done
 set -U __done_min_cmd_duration 10000
