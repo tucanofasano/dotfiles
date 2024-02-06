@@ -1,0 +1,10 @@
+misc {
+	{{- if eq .chezmoi.hostname "TommyLinuxLaptop" }}
+	vfr=1
+	vrr=0
+	{{- end}}
+	{{- if eq .chezmoi.hostname "TommyLinuxPC" }}
+	vfr=0
+	vrr=1
+	{{- end}}
+}
