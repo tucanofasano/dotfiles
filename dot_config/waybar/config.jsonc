@@ -97,7 +97,8 @@
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": ["", "", "", "", ""],
-    "on-click": "battop"
+    "on-click": "kitty battop",
+    "interval": 30
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
