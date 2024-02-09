@@ -1,6 +1,12 @@
 trees:
 - root: ~/Documents/Git_projects
   repos:
+  - name: nvidia-smi-waybar
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: https://github.com/PolpOnline/nvidia-smi-waybar.git
+      type: https
   - name: web
     worktree_setup: false
     remotes:
@@ -13,9 +19,9 @@ trees:
     - name: origin
       url: https://github.com/Tommaso-Melacarne-compiti-scuola/cpp.git
       type: https
-  - name: nvidia-smi-waybar
+  - name: svelte-rust-event-scheduler
     worktree_setup: false
     remotes:
     - name: origin
-      url: https://github.com/PolpOnline/nvidia-smi-waybar.git
+      url: https://github.com/PolpOnline/svelte-rust-event-scheduler.git
       type: https
