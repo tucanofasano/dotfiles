@@ -178,7 +178,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 ## Cope colorization
-set -l cope_script_path /usr/share/perl5/vendor_perl/auto/share/dist/Cope/
+set -l cope_script_path /usr/share/perl5/vendor_perl/auto/share/dist/App-Cope/
 
 for i in blkid free ifconfig lspci lsusb mount ps traceroute wget sha1sum sha256sum sha384sum sha512sum shasum
     alias $i="$cope_script_path/$i"
