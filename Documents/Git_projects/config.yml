@@ -1,11 +1,11 @@
 trees:
 - root: ~/Documents/Git_projects
   repos:
-  - name: nvidia-smi-waybar
+  - name: gpu-usage-waybar
     worktree_setup: false
     remotes:
     - name: origin
-      url: https://github.com/PolpOnline/nvidia-smi-waybar.git
+      url: https://github.com/PolpOnline/gpu-usage-waybar.git
       type: https
   - name: web
     worktree_setup: false
