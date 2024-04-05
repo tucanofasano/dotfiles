@@ -12,7 +12,7 @@
     "metrics": true
   },
   "theme": "Catppuccin Mocha",
-  "base_keymap": "JetBrains",
+  // "base_keymap": "JetBrains",
   "ui_font_size": 13,
   "buffer_font_size": 13,
   "ui_font_family": "CaskaydiaCove Nerd Font Mono",
