@@ -25,5 +25,6 @@
   },
   "inlay_hints": {
     "enabled": true
-  }
+  },
+  "autosave": "on_focus_change"
 }
