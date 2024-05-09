@@ -38,11 +38,14 @@ if test -d ~/Applications/depot_tools
     end
 end
 
+export BUN_INSTALL="$HOME/.bun"
+
 fish_add_path -P ~/.deno/bin
 fish_add_path -P ~/.cargo/bin
 fish_add_path -P ~/.moon/bin
 fish_add_path -P ~/.local/share/containers/podman-desktop/extensions-storage/podman-desktop.compose/bin
 fish_add_path -P ~/Android/Sdk/platform-tools/
+fish_add_path -P "$BUN_INSTALL/bin"
 
 
 ## Starship prompt
