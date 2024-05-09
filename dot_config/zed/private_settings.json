@@ -28,6 +28,11 @@
   },
   "autosave": "on_focus_change",
   "assistant": {
-    "openai_api_url": "http://localhost:11434/v1"
+    "version": "1",
+    "provider": {
+      "name": "openai",
+      "default_model": "gpt-4-turbo-preview",
+      "api_url": "http://localhost:11434/v1"
+    }
   }
 }
