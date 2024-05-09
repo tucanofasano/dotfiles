@@ -26,5 +26,8 @@
   "inlay_hints": {
     "enabled": true
   },
-  "autosave": "on_focus_change"
+  "autosave": "on_focus_change",
+  "assistant": {
+    "openai_api_url": "http://localhost:11434/v1"
+  }
 }
