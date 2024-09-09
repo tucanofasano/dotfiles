@@ -40,9 +40,15 @@ window {
     border: none;
 }
 
+#text {
+    margin: 0px;
+    margin-left: 6px;
+}
+
 #text:selected {
     color: @foreground;
-    margin: 0px 0px;
+    margin: 0px;
+    margin-left: 6px;
     border: none;
     border-radius: 8px;
 }
