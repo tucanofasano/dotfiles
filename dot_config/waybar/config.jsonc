@@ -104,7 +104,7 @@
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "{signalStrength}% | {bandwidthTotalBits} ",
     "format-ethernet": "{bandwidthDownBits}  | {bandwidthUpBits}  󰈀",
-    "tooltip-format": "{ifname} via {gwaddr}",
+    "tooltip-format": "{ifname} via {gwaddr} \n {bandwidthDownBits}  | {bandwidthUpBits} ",
     "format-linked": "{ifname} (No IP) 󰈀",
     "format-disconnected": "None 󰕑",
     "on-click": "kitty nmtui",
