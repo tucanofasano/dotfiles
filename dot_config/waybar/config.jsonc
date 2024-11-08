@@ -56,13 +56,13 @@
     "format": "{usage}% 󰍛",
     "tooltip": true,
     "interval": 1,
-    "on-click": "kitty btm --basic"
+    "on-click": "kitty btm --enable_gpu --basic"
   },
   "memory": {
     "format": "{percentage}%|{swapPercentage}% ",
     "tooltip-format": "{used}GiB/{total}GiB RAM used\n{swapUsed}GiB/{swapTotal}GiB SWAP used",
     "interval": 1,
-    "on-click": "kitty btm --basic"
+    "on-click": "kitty btm --enable_gpu --basic"
   },
   "custom/gpu-usage": {
   	 "format": "{} {icon}",
