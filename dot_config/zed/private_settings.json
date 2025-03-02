@@ -7,6 +7,11 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "base_keymap": "JetBrains",
+  "icon_theme": "Catppuccin Mocha",
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
   "telemetry": {
     "diagnostics": true,
     "metrics": true
@@ -26,13 +31,5 @@
   "inlay_hints": {
     "enabled": true
   },
-  "autosave": "on_focus_change",
-  "assistant": {
-    "version": "1",
-    "provider": {
-      "name": "openai",
-      "default_model": "gpt-4-turbo-preview",
-      "api_url": "http://localhost:11434/v1"
-    }
-  }
+  "autosave": "on_focus_change"
 }
