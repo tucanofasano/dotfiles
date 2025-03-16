@@ -56,20 +56,20 @@
     "format": "{usage}% 󰍛",
     "tooltip": true,
     "interval": 1,
-    "on-click": "kitty btm --enable_gpu --basic"
+    "on-click": "ghostty -e btm --enable_gpu --basic"
   },
   "memory": {
     "format": "{percentage}%|{swapPercentage}% ",
     "tooltip-format": "{used}GiB/{total}GiB RAM used\n{swapUsed}GiB/{swapTotal}GiB SWAP used",
     "interval": 1,
-    "on-click": "kitty btm --enable_gpu --basic"
+    "on-click": "ghostty -e btm --enable_gpu --basic"
   },
   "custom/gpu-usage": {
   	 "format": "{} {icon}",
   	 "exec": "gpu-usage-waybar",
   	 "return-type": "json",
   	 "format-icons": "󰾲",
-  	 "on-click": "kitty nvtop",
+  	 "on-click": "ghostty -e nvtop",
   },
   "temperature": {
     "hwmon-path": ["/sys/class/hwmon/hwmon4/temp1_input", "/sys/class/hwmon/hwmon2/temp1_input"],
@@ -97,7 +97,7 @@
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": ["", "", "", "", ""],
-    "on-click": "kitty battop",
+    "on-click": "ghostty -e battop",
     "interval": 30
   },
   "network": {
@@ -107,7 +107,7 @@
     "tooltip-format": "{ifname} via {gwaddr}\n{bandwidthDownBits}  | {bandwidthUpBits} ",
     "format-linked": "{ifname} (No IP) 󰈀",
     "format-disconnected": "None 󰕑",
-    "on-click": "kitty nmtui",
+    "on-click": "ghostty -e nmtui",
     "interval": 1
   },
   "pulseaudio": {
