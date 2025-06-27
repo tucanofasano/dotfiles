@@ -2,7 +2,9 @@
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-y": "editor::Redo"
+      "ctrl-y": "editor::Redo",
+      "f2": "editor::Rename",
+      "ctrl-alt-space": "editor::ShowCompletions"
     }
   }
 ]
