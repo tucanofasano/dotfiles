@@ -217,3 +217,14 @@ alias icat="kitty +kitten icat"
 
 alias gitui="gitui -t mocha.ron"
 
+
+# pnpm
+set -gx PNPM_HOME "/home/tucanofasano/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+
+# tucanofasano's aliases
+alias workspace='cd ~/workspace'
